@@ -5,7 +5,7 @@ public class Construct {
 	int wI;
 	boolean inSubfold = false, aDel = false;
 	boolean corr = true;
-
+	//Разделение входной строки на нужные данные
 	Construct(String string) throws IOException{
 		String[] a=string.split("\"");
 		String[] b=new String[0];
@@ -48,7 +48,7 @@ public class Construct {
 		}
 	}
 
-	private static String getMask(String string) {
+	private static String getMask(String string) {//Изменение маски для более удобной проверки
 		StringBuffer a = new StringBuffer();
 		for (int i = 0; i < string.length(); i++) {
 			switch (string.charAt(i)) {
@@ -72,7 +72,7 @@ public class Construct {
 		return a.toString();
 	}
 
-	private static boolean setBool(String string) {
+	private static boolean setBool(String string) {//Перевод строки в boolean
 		if (string.equals("false")) {
 			return false;
 		} else {
