@@ -1,5 +1,5 @@
 import java.io.IOException;
-
+//Поток
 public class Proc extends Thread {
 	int n;
 	Construct cons;
@@ -10,9 +10,11 @@ public class Proc extends Thread {
 	@Override
 	public void run() {
 		try {
-			FileScanner.scan(cons.iD, cons.oD, cons.mask, cons.inSubfold, cons.aDel);
-			Thread.sleep(cons.wI * 1000);
-			this.run();
+			System.put.println("Scan started")
+			FileScanner.scan(cons.iD, cons.oD, cons.mask, cons.inSubfold, cons.aDel);//Запуск скана
+			System.out.println("Scan completed")
+			Thread.sleep(cons.wI * 1000);//Интервал
+			this.run();//Повторный запуск
 		} catch (IOException | InterruptedException e1) {
 			e1.printStackTrace();
 		}
